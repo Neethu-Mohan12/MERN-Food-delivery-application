@@ -15,7 +15,6 @@ const ProductList = () => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [quantity, setQuantity] = useState("");
-  // const [brand, setBrand] = useState("");
   const [stock, setStock] = useState(0);
   const [imageUrl, setImageUrl] = useState(null);
   const navigate = useNavigate();
@@ -35,7 +34,6 @@ const ProductList = () => {
       productData.append("price", price);
       productData.append("category", category);
       productData.append("quantity", quantity);
-      // productData.append("brand", brand);
       productData.append("countInStock", stock);
 
       const { data } = await createProduct(productData);
